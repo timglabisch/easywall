@@ -1,0 +1,11 @@
+[package]
+name = "easywall"
+version = "0.1.0"
+authors = ["timglabisch <glabisch@easybill.de>"]
+edition = "2018"
+
+
+[dependencies]
+nix = "*"
+signal-hook = "*"
+libc = "0.2.48"
