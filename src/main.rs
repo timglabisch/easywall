@@ -272,7 +272,8 @@ pub fn exec_child(cmd: Vec<&str>) -> Result<(), String> {
 fn main() -> Result<(), String> {
     let fork_res = unistd::fork().expect("could not fork");
 
-    let cmd = vec!["ls", "-lah"];
+    let cmd = vec!["/usr/bin/php", "/rust/examples/foo.php"];
+    // let cmd = vec!["/usr/bin/php", "/rust/examples/foo.php"];
 
     match fork_res {
         unistd::ForkResult::Parent { child } => {
